@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy / Datenschutzerklärung — Nadia von Oesterreich</title>
+  <!-- Google Fonts loaded conditionally after cookie consent -->
+  <script>
+    (function() {
+      if (localStorage.getItem('nvo_cookie_consent') === 'accepted') {
+        var l = document.createElement('link');
+        l.rel = 'stylesheet';
+        l.href = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap';
+        document.head.appendChild(l);
+      }
+    })();
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F5F0E8;
+      --cream-dark: #EDE5D4;
+      --orange: #fa5437;
+      --orange-light: #fc7a62;
+      --orange-pale: #fff0ed;
+      --ink: #1C1A17;
+      --ink-mid: #4A4540;
+      --ink-muted: #8A8278;
+      --white: #FFFCF8;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--cream-dark);
+      padding: 0 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-back {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-back:hover { color: var(--orange); }
+    .nav-back::before { content: '←'; font-size: 1rem; }
+
+    main {
+      flex: 1;
+      padding: 6rem 8% 7rem;
+      max-width: 760px;
+    }
+
+    .page-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .lang-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .lang-tab {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      padding: 0.75rem 1.5rem;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .lang-tab.active {
+      color: var(--orange);
+      border-bottom-color: var(--orange);
+    }
+
+    .lang-tab:hover { color: var(--orange); }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    h3 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin: 1.5rem 0 0.5rem;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+    }
+
+    p {
+      color: var(--ink-mid);
+      font-weight: 300;
+      line-height: 1.8;
+      margin-bottom: 0.8rem;
+    }
+
+    ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+      color: var(--ink-mid);
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    li { margin-bottom: 0.3rem; }
+
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--orange-light);
+      margin: 2rem 0;
+    }
+
+    .content-block { display: none; }
+    .content-block.active { display: block; }
+
+    footer {
+      background: var(--ink);
+      color: var(--ink-muted);
+      padding: 2rem 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+    }
+
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      color: var(--ink-muted);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--orange-light); }
+
+    @media (max-width: 600px) {
+      main { padding: 4rem 6% 5rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Nadia von Oesterreich</a>
+    <a href="index.html" class="nav-back">Back to site</a>
+  </nav>
+
+  <main>
+    <p class="page-label">Legal</p>
+
+    <div class="lang-tabs">
+      <button class="lang-tab active" onclick="switchLang('de')">Deutsch</button>
+      <button class="lang-tab" onclick="switchLang('en')">English</button>
+    </div>
+
+    <!-- GERMAN -->
+    <div class="content-block active" id="block-de">
+      <h1>Datenschutzerklärung</h1>
+      <p class="last-updated">Zuletzt aktualisiert: März 2025</p>
+
+      <p>Personenbezogene Daten (nachfolgend zumeist nur „Daten" genannt) werden von uns nur im Rahmen der Erforderlichkeit sowie zum Zwecke der Bereitstellung eines funktionsfähigen und nutzerfreundlichen Internetauftritts, inklusive seiner Inhalte und der dort angebotenen Leistungen, verarbeitet.</p>
+      <p>Gemäß Art. 4 Ziffer 1 der Verordnung (EU) 2016/679, also der Datenschutz-Grundverordnung (nachfolgend nur „DSGVO" genannt), gilt als „Verarbeitung" jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführter Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten.</p>
+
+      <div class="divider"></div>
+
+      <h2>I. Informationen über uns als Verantwortliche</h2>
+      <p>
+        Nadia von Oesterreich<br />
+        Saalburgstrasse 57<br />
+        60385 Frankfurt am Main<br /><br />
+        Telefon: +49 176 5696 5225<br />
+        E-Mail: <a href="mailto:hi@nadiavonoesterreich.com">hi@nadiavonoesterreich.com</a>
+      </p>
+
+      <div class="divider"></div>
+
+      <h2>II. Rechte der Nutzer und Betroffenen</h2>
+      <p>Mit Blick auf die nachfolgend noch näher beschriebene Datenverarbeitung haben die Nutzer und Betroffenen das Recht:</p>
+      <ul>
+        <li>auf Bestätigung, ob sie betreffende Daten verarbeitet werden, auf Auskunft über die verarbeiteten Daten, auf weitere Informationen über die Datenverarbeitung sowie auf Kopien der Daten (vgl. Art. 15 DSGVO);</li>
+        <li>auf Berichtigung oder Vervollständigung unrichtiger bzw. unvollständiger Daten (vgl. Art. 16 DSGVO);</li>
+        <li>auf unverzügliche Löschung der sie betreffenden Daten (vgl. Art. 17 DSGVO), oder, alternativ, soweit eine weitere Verarbeitung gemäß Art. 17 Abs. 3 DSGVO erforderlich ist, auf Einschränkung der Verarbeitung nach Maßgabe von Art. 18 DSGVO;</li>
+        <li>auf Erhalt der sie betreffenden und von ihnen bereitgestellten Daten und auf Übermittlung dieser Daten an andere Anbieter/Verantwortliche (vgl. Art. 20 DSGVO);</li>
+        <li>auf Beschwerde gegenüber der Aufsichtsbehörde, sofern sie der Ansicht sind, dass die sie betreffenden Daten durch den Anbieter unter Verstoß gegen datenschutzrechtliche Bestimmungen verarbeitet werden (vgl. Art. 77 DSGVO).</li>
+      </ul>
+      <p>Darüber hinaus ist der Anbieter dazu verpflichtet, alle Empfänger, denen gegenüber Daten durch den Anbieter offengelegt worden sind, über jedwede Berichtigung oder Löschung von Daten oder die Einschränkung der Verarbeitung, die aufgrund der Artikel 16, 17 Abs. 1, 18 DSGVO erfolgt, zu unterrichten. Diese Verpflichtung besteht jedoch nicht, soweit diese Mitteilung unmöglich oder mit einem unverhältnismäßigen Aufwand verbunden ist. Unbeschadet dessen hat der Nutzer ein Recht auf Auskunft über diese Empfänger.</p>
+      <p>Ebenfalls haben die Nutzer und Betroffenen nach Art. 21 DSGVO das Recht auf Widerspruch gegen die künftige Verarbeitung der sie betreffenden Daten, sofern die Daten durch den Anbieter nach Maßgabe von Art. 6 Abs. 1 lit. f) DSGVO verarbeitet werden. Insbesondere ist ein Widerspruch gegen die Datenverarbeitung zum Zwecke der Direktwerbung statthaft.</p>
+      <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:hi@nadiavonoesterreich.com">hi@nadiavonoesterreich.com</a></p>
+      <p>Die zuständige Aufsichtsbehörde in Hessen ist der <a href="https://datenschutz.hessen.de" target="_blank" rel="noopener">Hessische Beauftragte für Datenschutz und Informationsfreiheit</a>.</p>
+
+      <div class="divider"></div>
+
+      <h2>III. Informationen zur Datenverarbeitung</h2>
+      <p>Ihre bei Nutzung unseres Internetauftritts verarbeiteten Daten werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt, der Löschung der Daten keine gesetzlichen Aufbewahrungspflichten entgegenstehen und nachfolgend keine anderslautenden Angaben zu einzelnen Verarbeitungsverfahren gemacht werden.</p>
+
+      <h3>Cookies</h3>
+      <p>Wir setzen auf unserer Website Cookies ein. Cookies sind kleine Textdateien oder andere Speichertechnologien, die durch den von Ihnen eingesetzten Internet-Browser auf Ihrem Endgerät ablegt und gespeichert werden. Durch diese Cookies werden im individuellen Umfang bestimmte Informationen von Ihnen, wie beispielsweise Ihre Browser- oder Standortdaten oder Ihre IP-Adresse, verarbeitet.</p>
+      <p>Sie können die Installation der Cookies durch eine Einstellung Ihres Internet-Browsers verhindern oder einschränken. Soweit Sie die Installation der Cookies verhindern oder einschränken, kann es allerdings dazu kommen, dass nicht sämtliche Funktionen unseres Internetauftritts vollumfänglich nutzbar sind.</p>
+
+      <h3>Kontaktformular</h3>
+      <p>Wenn Sie uns über das Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Daten werden 6 Monate nach abschließender Beantwortung Ihrer Anfrage gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+      <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b) DSGVO.</p>
+
+      <h3>Server-Logfiles</h3>
+      <p>Der Hosting-Anbieter dieser Website erhebt und speichert automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt. Dies sind: Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+
+      <h3>Netlify (Hosting)</h3>
+      <p>Diese Website wird gehostet von Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, USA. Beim Aufruf der Website werden durch Netlify technische Zugriffsdaten (einschließlich IP-Adresse, Browsertyp, Zeitstempel) verarbeitet. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f) DSGVO (berechtigtes Interesse am sicheren und stabilen Betrieb der Website). Weitere Informationen finden Sie in der <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Datenschutzerklärung von Netlify</a>.</p>
+
+      <h3>Google Fonts</h3>
+      <p>Diese Website nutzt zur einheitlichen Darstellung von Schriftarten sogenannte Google Fonts, die von Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland bereitgestellt werden. Google Fonts werden auf dieser Website erst nach Ihrer ausdrücklichen Einwilligung (Akzeptieren optionaler Cookies) geladen. Erst nach Erteilung der Einwilligung lädt Ihr Browser die benötigten Web Fonts von Google-Servern, wobei Ihre IP-Adresse an Google übermittelt werden kann. Ohne Einwilligung werden ausschließlich systemseitige Ersatzschriftarten verwendet, ohne dass eine Verbindung zu Google-Servern hergestellt wird. Rechtsgrundlage: Art. 6 Abs. 1 lit. a) DSGVO (Einwilligung). Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>.</p>
+
+      <h3>Instagram</h3>
+      <p>Wir unterhalten eine Präsenz auf der Plattform Instagram, einem Dienst der Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland. Auf dieser Plattform sind wir gemeinsam mit Meta Platforms Ireland Limited verantwortlich. Der Datenschutzbeauftragte von Instagram ist über dieses <a href="https://www.facebook.com/help/contact/540977946302970" target="_blank" rel="noopener">Kontaktformular</a> erreichbar. Die Vereinbarung zur gemeinsamen Verantwortlichkeit ist abrufbar unter: <a href="https://www.facebook.com/legal/terms/page_controller_addendum" target="_blank" rel="noopener">https://www.facebook.com/legal/terms/page_controller_addendum</a>. Rechtsgrundlage: Art. 6 Abs. 1 lit. f) DSGVO. Datenschutzerklärung Instagram: <a href="https://help.instagram.com/519522125107875" target="_blank" rel="noopener">https://help.instagram.com/519522125107875</a>.</p>
+
+      <h3>LinkedIn</h3>
+      <p>Wir unterhalten eine Präsenz auf LinkedIn, einem Dienst der LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Irland, einer Tochtergesellschaft der LinkedIn Corporation, 1000 W. Maude Avenue, Sunnyvale, CA 94085, USA. Wir weisen darauf hin, dass dabei Nutzerdaten außerhalb der Europäischen Union verarbeitet werden können. Die Datenschutzerklärung von LinkedIn finden Sie unter: <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener">https://www.linkedin.com/legal/privacy-policy</a>.</p>
+
+      <h3>Google Analytics</h3>
+      <p>Wir setzen auf unserer Website Google Analytics ein, einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Rechtsgrundlage: Art. 6 Abs. 1 lit. f) DSGVO. Nutzungs- und nutzerbezogene Informationen, wie bspw. IP-Adresse, Ort, Zeit oder Häufigkeit des Besuchs, werden dabei an einen Server von Google in den USA übertragen und dort gespeichert. Wir nutzen Google Analytics mit der Funktion der IP-Anonymisierung. Weitere Informationen: <a href="https://www.google.com/intl/de/policies/privacy/partners" target="_blank" rel="noopener">https://www.google.com/intl/de/policies/privacy/partners</a>. Google bietet zudem ein Opt-Out-Add-On an: <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener">https://tools.google.com/dlpage/gaoptout</a>.</p>
+
+      <h3>Calendly</h3>
+      <p>Sie haben die Möglichkeit, auf unserer Website einen Termin zu buchen. Wir nutzen dazu den Online-Kalender „Calendly", einen Dienst der Calendly LLC, 3423 Piedmont Road NE, Atlanta, GA 30305-1754, USA. Die von Ihnen im Rahmen der Terminbuchung angegebenen Daten (inkl. Kontaktdaten und Anliegen) werden gespeichert und verbleiben bei uns, bis Sie die Löschung verlangen, Ihre Einwilligung widerrufen oder der Zweck der Datenspeicherung entfällt. Wir haben mit Calendly einen Auftragsverarbeitungsvertrag geschlossen. Weitere Informationen: <a href="https://calendly.com/pages/privacy" target="_blank" rel="noopener">https://calendly.com/pages/privacy</a>.</p>
+
+      <h3>PayPal</h3>
+      <p>Für die Abwicklung von Zahlungen nutzen wir ggf. den Zahlungsdienstleister PayPal (Europe) S.à.r.l. & Cie. S.C.A., 22-24 Boulevard Royal, L-2449 Luxemburg. Bei Zahlung via PayPal werden Ihre Kontaktdaten an PayPal übermittelt. Rechtsgrundlage: Art. 6 Abs. 1 lit. b) DSGVO. Weitere Informationen: <a href="https://www.paypal.com/de/webapps/mpp/ua/privacy-full" target="_blank" rel="noopener">PayPal Datenschutzerklärung</a>.</p>
+
+      <h3>WhatsApp</h3>
+      <p>Zur Kontaktaufnahme besteht die Möglichkeit, uns über den Messenger-Dienst WhatsApp zu kontaktieren. WhatsApp ist ein Dienst der WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland, einer Tochtergesellschaft von Meta. Bei Kontaktaufnahme über WhatsApp werden die Mobiltelefonnummer sowie die übermittelten Nachrichten verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. b) DSGVO bzw. Art. 6 Abs. 1 lit. f) DSGVO. Weitere Informationen: <a href="https://www.whatsapp.com/legal/#privacy-policy" target="_blank" rel="noopener">WhatsApp Datenschutzrichtlinie</a>.</p>
+
+      <div class="divider"></div>
+
+      <h2>Aktualität dieser Datenschutzerklärung</h2>
+      <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand März 2025. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.</p>
+    </div>
+
+    <div class="content-block" id="block-en">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: March 2025</p>
+
+      <p>Personal data (usually referred to just as "data" below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there.</p>
+      <p>Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the "GDPR"), "processing" refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
+
+      <div class="divider"></div>
+
+      <h2>I. Information about us as controllers of your data</h2>
+      <p>
+        Nadia von Oesterreich<br />
+        Saalburgstrasse 57<br />
+        60385 Frankfurt am Main<br /><br />
+        Phone: +49 176 5696 5225<br />
+        Email: <a href="mailto:hi@nadiavonoesterreich.com">hi@nadiavonoesterreich.com</a>
+      </p>
+
+      <div class="divider"></div>
+
+      <h2>II. The rights of users and data subjects</h2>
+      <p>With regard to the data processing to be described in more detail below, users and data subjects have the right:</p>
+      <ul>
+        <li>to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR);</li>
+        <li>to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR);</li>
+        <li>to the immediate deletion of data concerning them (cf. also Art. 17 GDPR), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR;</li>
+        <li>to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR);</li>
+        <li>to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR).</li>
+      </ul>
+      <p>In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
+      <p>Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller's future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible.</p>
+      <p>To exercise your rights, please contact: <a href="mailto:hi@nadiavonoesterreich.com">hi@nadiavonoesterreich.com</a></p>
+      <p>The competent supervisory authority in Hesse is the <a href="https://datenschutz.hessen.de" target="_blank" rel="noopener">Hessischer Beauftragter für Datenschutz und Informationsfreiheit</a>.</p>
+
+      <div class="divider"></div>
+
+      <h2>III. Information about the data processing</h2>
+      <p>Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
+
+      <h3>Cookies</h3>
+      <p>We use cookies on our website. Cookies are small text files or other storage technologies stored on your computer by your browser. These cookies process certain specific information about you, such as your browser, location data, or IP address. You can refuse the use of cookies by changing the settings on your browser. If you prevent or restrict the installation of cookies, not all of the functions on our site may be fully usable.</p>
+
+      <h3>Contact</h3>
+      <p>If you contact us via email or the contact form, the data you provide will be used for the purpose of processing your request. We must have this data in order to process and answer your inquiry; otherwise we will not be able to answer it in full or at all. The legal basis for this data processing is Art. 6 Para. 1 lit. b) GDPR. Your data will be deleted 6 months after we have fully answered your inquiry, unless there is a further legal obligation to store your data, such as if an order or contract resulted therefrom.</p>
+
+      <h3>Server log files</h3>
+      <p>The hosting provider of this website automatically collects and stores information in server log files that your browser transmits automatically. This includes: browser type and version, operating system, referrer URL, hostname of the accessing device, time of the server request, and IP address. This data is not merged with other data sources.</p>
+
+      <h3>Netlify (Hosting)</h3>
+      <p>This website is hosted by Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, USA. When the website is accessed, Netlify processes technical access data (including IP address, browser type, and timestamp). The legal basis is Art. 6 Para. 1 lit. f) GDPR (legitimate interest in the secure and stable operation of the website). For more information, please see <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Netlify's Privacy Policy</a>.</p>
+
+      <h3>Google Fonts</h3>
+      <p>This website uses Google Fonts, provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, for consistent typography. Google Fonts are only loaded on this website after you have given your explicit consent (by accepting optional cookies). Only after consent is given does your browser fetch the required fonts from Google's servers, at which point your IP address may be transmitted to Google. Without consent, only system fallback fonts are used and no connection to Google's servers is established. Legal basis: Art. 6 Para. 1 lit. a) GDPR (consent). Further information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>.</p>
+
+      <h3>Instagram</h3>
+      <p>To advertise our services and to communicate with interested parties, we maintain a presence on the Instagram platform. On this social media platform, we are jointly responsible with Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland. The data protection officer of Instagram can be reached via this <a href="https://www.facebook.com/help/contact/540977946302970" target="_blank" rel="noopener">contact form</a>. The joint responsibility agreement is available at: <a href="https://www.facebook.com/legal/terms/page_controller_addendum" target="_blank" rel="noopener">https://www.facebook.com/legal/terms/page_controller_addendum</a>. Legal basis: Art. 6 Para. 1 lit. f) GDPR. Privacy policy: <a href="https://help.instagram.com/519522125107875" target="_blank" rel="noopener">https://help.instagram.com/519522125107875</a>.</p>
+
+      <h3>LinkedIn</h3>
+      <p>We maintain an online presence on LinkedIn to present our services and to communicate with clients and prospects. LinkedIn is a service of LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Ireland, a subsidiary of LinkedIn Corporation, 1000 W. Maude Avenue, Sunnyvale, CA 94085, USA. Please note that user data may be processed outside the European Union, particularly in the United States. LinkedIn's privacy policy can be found at: <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener">https://www.linkedin.com/legal/privacy-policy</a>.</p>
+
+      <h3>Google Analytics</h3>
+      <p>We use Google Analytics on our website, a web analytics service provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. Legal basis: Art. 6 Para. 1 lit. f) GDPR. Usage and user-related information, such as IP address, place, time, or frequency of your visits to our website will be transmitted to a Google server in the United States and stored there. We use Google Analytics with the IP anonymization function, whereby Google truncates the IP address within the EU or the EEA before it is transmitted to the US. Further information: <a href="https://www.google.com/intl/de/policies/privacy/partners" target="_blank" rel="noopener">https://www.google.com/intl/de/policies/privacy/partners</a>. Google also offers an opt-out add-on at <a href="https://tools.google.com/dlpage/gaoptout?hl=en" target="_blank" rel="noopener">https://tools.google.com/dlpage/gaoptout</a>.</p>
+
+      <h3>Calendly</h3>
+      <p>You have the possibility to book an appointment on our website. We use the online calendar "Calendly", a service provided by Calendly LLC, 3423 Piedmont Road NE, Atlanta, GA 30305-1754, USA. The information you provide during booking, including contact details and your enquiry, will be stored for the purpose of processing your request and in case of follow-up questions. We have concluded a Data Processing Addendum with Calendly. Further information: <a href="https://calendly.com/pages/privacy" target="_blank" rel="noopener">https://calendly.com/pages/privacy</a>.</p>
+
+      <h3>PayPal</h3>
+      <p>If you choose to pay via PayPal, your contact data is transmitted to PayPal (Europe) S.à.r.l. & Cie. S.C.A., 22-24 Boulevard Royal, L-2449 Luxembourg, as part of the order process. This transmission is necessary to process your order with the selected payment method. Legal basis: Art. 6 Para. 1 lit. b) GDPR. Further information: <a href="https://www.paypal.com/de/webapps/mpp/ua/privacy-full" target="_blank" rel="noopener">PayPal Privacy Statement</a>.</p>
+
+      <h3>WhatsApp</h3>
+      <p>To establish contact, we offer the option to reach us via the messenger service WhatsApp, a service of WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Ireland, a subsidiary of Meta. When you contact us via WhatsApp, the mobile phone number used and the content of the messages are processed. Please note that WhatsApp and Meta may also process this data in the United States. Legal basis: Art. 6 Para. 1 lit. b) GDPR or Art. 6 Para. 1 lit. f) GDPR. Further information: <a href="https://www.whatsapp.com/legal/#privacy-policy" target="_blank" rel="noopener">WhatsApp Privacy Policy</a>.</p>
+
+      <div class="divider"></div>
+
+      <h2>Updates to this policy</h2>
+      <p>This privacy policy is current as of March 2025. As the website evolves or legal requirements change, this policy may be updated accordingly.</p>
+    </div>
+  </main>
+
+  <footer>
+    <span>© 2025 Nadia von Oesterreich</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="privacy.html">Datenschutz</a>
+    </div>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.content-block').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById('block-' + lang).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
